@@ -1474,24 +1474,32 @@
     ]
   },
   "packageFolders": {
-    "/Users/rinchi/.nuget/packages/": {}
+    "C:\\Users\\class_Student\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rinchi/VSCodeProjects/belonging/belonging.csproj",
-      "projectName": "belonging",
-      "projectPath": "/Users/rinchi/VSCodeProjects/belonging/belonging.csproj",
-      "packagesPath": "/Users/rinchi/.nuget/packages/",
-      "outputPath": "/Users/rinchi/VSCodeProjects/belonging/obj/",
+      "projectUniqueName": "C:\\Users\\class_Student\\Desktop\\AvaloniNail\\AvaloniNail.csproj",
+      "projectName": "AvaloniNail",
+      "projectPath": "C:\\Users\\class_Student\\Desktop\\AvaloniNail\\AvaloniNail.csproj",
+      "packagesPath": "C:\\Users\\class_Student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\class_Student\\Desktop\\AvaloniNail\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/rinchi/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\class_Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1556,7 +1564,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
