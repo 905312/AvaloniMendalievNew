@@ -14,6 +14,7 @@ namespace belonging.Models
         private readonly List<Shape> _shapes = new List<Shape>();
         private Shape? _draggedShape;
         private Point _dragStart;
+        private TextBlock? _currentMessage; // Текущее сообщение
 
         public ShapeManager(Canvas canvas)
         {
@@ -43,17 +44,14 @@ namespace belonging.Models
                 {
                     _draggedShape = shape;
                     _dragStart = point;
+                    ShowMessage("Попадание");
                     break;
                 }
             }
 
             if (_draggedShape == null)
             {
-                ShowMessage("Не попал", point);
-            }
-            else
-            {
-                ShowMessage("Попадание", point);
+                ShowMessage("Не попал");
             }
         }
 
@@ -85,25 +83,38 @@ namespace belonging.Models
             _draggedShape = null;
         }
 
-        private async void ShowMessage(string message, Point point)
+        private async void ShowMessage(string message)
         {
-            var textBlock = new TextBlock
+            // Удаляем предыдущее сообщение, если оно есть
+            if (_currentMessage != null)
+            {
+                _canvas.Children.Remove(_currentMessage);
+                _currentMessage = null;
+            }
+
+            // Создаем новое сообщение
+            _currentMessage = new TextBlock
             {
                 Text = message,
                 FontSize = 50,
                 Foreground = Brushes.Red,
                 HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
-                VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
+                VerticalAlignment = Avalonia.Layout.VerticalAlignment.Top,
                 TextAlignment = Avalonia.Media.TextAlignment.Center
             };
 
-            Canvas.SetLeft(textBlock, point.X - 100);
-            Canvas.SetTop(textBlock, point.Y - 50);
+            Canvas.SetLeft(_currentMessage, (_canvas.Bounds.Width - 200) / 2); // Центрирование по горизонтали
+            Canvas.SetTop(_currentMessage, 50); // Позиция сверху
 
-            _canvas.Children.Add(textBlock);
+            _canvas.Children.Add(_currentMessage);
 
+            // Удаляем сообщение через 2 секунды
             await Task.Delay(2000);
-            _canvas.Children.Remove(textBlock);
+            if (_currentMessage != null)
+            {
+                _canvas.Children.Remove(_currentMessage);
+                _currentMessage = null;
+            }
         }
     }
 }

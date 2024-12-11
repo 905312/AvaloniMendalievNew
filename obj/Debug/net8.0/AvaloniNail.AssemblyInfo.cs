@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AvaloniNail")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+186967e606c2e49992a9cf084f61c999db8aa1eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91edcab2b64bde150ba375c2afbce917e2c4ea7a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AvaloniNail")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AvaloniNail")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
